@@ -3,6 +3,36 @@ import React from 'react'
 // assets
 import { svgs } from '../../constants/assets'
 
+/* 
+const menus = [
+    "Home",
+    "Article",
+    "Pages",
+    "Pricing",
+    "FAQS"
+] 
+*/
+
+// For reusable Mwnus {
+
+const menus = [
+    {name: "Home", path:"/"},
+    {name: "Article", path:"/article"},
+    {name: "Pages", path:"/pages"},
+    {name: "Pricing", path:"/pricing"},
+    {name: "FAQs", path:"/faqs"},
+]
+
+const Menu = ({name, path}) =>{
+    return(
+        <>
+        <li className='menu hover:font-bold hover:text-blue-600 transition-all ease-out duration-200'><a href={path}>{name}</a></li>
+        </>
+    )
+}
+
+// }
+
 const Header = () => {
   return (
     <>
@@ -18,11 +48,7 @@ const Header = () => {
                     <div className="nav-wrapper">
                         <nav className='main-nav flex gap-8 items-center'>
                             <ul className='menus flex gap-8 font-semibold'>
-                                <li className='menu'><a href="">Home</a></li>
-                                <li className='menu'><a href="">Article</a></li>
-                                <li className='menu'><a href="">Pages</a></li>
-                                <li className='menu'><a href="">Pricing</a></li>
-                                <li className='menu'><a href="">FAQs</a></li>
+                                {menus.map((menu)=> <Menu name={menu.name} path={menu.path}/>)}
                             </ul>
                             <div>
                                 <button className='border-2 border-blue-600 px-4 py-2 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200 cursor-pointer'>Sign In</button>
