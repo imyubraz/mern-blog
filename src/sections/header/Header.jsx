@@ -26,7 +26,7 @@ const menus = [
 const Menu = ({name, path}) =>{
     return(
         <>
-        <li className='menu hover:font-bold hover:text-blue-600 transition-all ease-out duration-200'><a href={path}>{name}</a></li>
+        <li className='menu hover:font-bold hover:text-primary transition-all ease-out duration-200'><a href={path}>{name}</a></li>
         </>
     )
 }
@@ -51,7 +51,7 @@ const Header = () => {
                                 {menus.map((menu)=> <Menu name={menu.name} path={menu.path}/>)}
                             </ul>
                             <div>
-                                <button className='border-2 border-blue-600 px-4 py-2 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200 cursor-pointer'>Sign In</button>
+                                <button className='border-2 border-primary px-4 py-2 rounded-full font-semibold hover:bg-primary hover:text-white transition-all duration-200 cursor-pointer'>Sign In</button>
                             </div>
                         </nav>
                     </div>
