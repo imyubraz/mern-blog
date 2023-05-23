@@ -6,7 +6,7 @@ const Layout = ({children}) => {
   return (
     <>
     <div className="content font-opensans">
-        <header className="min-h-[10vh]">
+        <header>
             <Header />
         </header>
         <main className="min-h-[80vh]">
