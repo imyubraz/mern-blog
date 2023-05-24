@@ -5,8 +5,8 @@ import Footer from '../sections/footer/Footer';
 const Layout = ({children}) => {
   return (
     <>
-    <div className="content font-opensans">
-        <header>
+    <div className="content font-opensans overflow-hidden">
+        <header className=''>
             <Header />
         </header>
         <main className="min-h-[80vh]">
